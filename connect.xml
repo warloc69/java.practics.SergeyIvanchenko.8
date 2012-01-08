@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<datasource>
+	<source-name>jdbc:oracle:thin:</source-name>
+	<connection-url>127.0.0.1:1521:XE</connection-url>
+	<driver-class>oracle.jdbc.OracleDriver</driver-class>
+	<password>student</password>
+	<user-name>system</user-name>
+</datasource>
+	
+	
