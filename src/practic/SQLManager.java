@@ -13,15 +13,16 @@ public class SQLManager {
 				new BufferedReader(
 					new InputStreamReader(System.in, "Cp866"));  
 				String com = "";
+			DBWizardInterface db = new DBWizard(DBConnector.getConnection());
 			while (!"exit".equals(com)) {
 			log.info("write command (view, add, remove, exit):"); 
 				com = br.readLine();
 				if ("view".equals(com)) {
-					new DBView();
+					db.view();
 				} else if ("add".equals(com)) {
-					new DBAdder();
+					db.add();
 				} else if ("remove".equals(com)) {
-					new DBRemover();
+					db.remove();
 				}
 			}
 		} catch (ConnectException e) {
